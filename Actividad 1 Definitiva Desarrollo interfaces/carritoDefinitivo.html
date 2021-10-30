@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='carritoDefinitivo.css'> 
+    <link rel='stylesheet' type='text/css' media='screen' href='carritoresoponsiveDefinitivo.css'>
+    <script src='carritoDefinitivo.js'></script>
+</head>
+
+<body>
+   
+    <fieldset ><legend><img id="imagencarrito" src="../Downloads/carritocompra2.png" alt=""></legend>
+        <form action="" title="Nombre articulo">
+            <div>
+                <label for="nombrearticulo">Nombre artículo:</label>
+                <input type="text" id="nombrearticulo" placeholder="Nombre artículo" focus>
+                <label class="oculto" id="cajamalcumplimentada">Falta Articulo</label>
+            </div>
+            <div>
+                <label for="precioarticulo">Precio artículo:</label>
+                <input type="text" id="precioarticulo" placeholder="Precio artículo">
+                <label class="oculto" id="cajamalcumplimentada">Falta Precio</label>
+                <label class="oculto" id="cajamalcumplimentada">Tipo de dato incorrecto</label>
+            </div>
+            <div>
+                <label for="unidades">Unidades:</label>
+                <input type="number"  id="unidades" value="1" min="1">
+            </div>
+            <input type="button" value="Añadir al carrito" id="botonañadir" class="boton">
+            <div>
+                <label>Artículos en el carrito:</label>
+                <input type="text"  id="totalarticulos" placeholder="Artículos en el carrito">
+            </div>
+            <div>
+                <label>Precio total del carrito: </label>
+                <input type="text" id="preciototal"  placeholder="Precio total del carrito">
+            </div>
+            <div>
+                <label for="formapago">Forma de Pago</label>
+                <select name="formapago" id="formapago">
+                    <option value="Seleccion" id = "seleccion">--Seleccione--</option>
+                    <option value="Tarjeta" id="tarjeta">Tarjeta</option>
+                    <option value="Efectivo" id="efectivo">Efectivo</option>
+                </select>
+            </div>
+            <section id="pagotarjeta" class="oculto">
+                <div>
+                    <label for="titulartarjeta">Titular tarjeta</label>
+                    <input type="text" id="titulartarjeta" placeholder="Titular tarjeta">
+                </div>
+                <div>
+                    <label for="numerotarjeta">Número tarjeta</label>
+                    <input type="text" id="numerotarjeta" placeholder="Número tarjeta">
+                </div>
+                <div>
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" placeholder="CVV">
+                </div>
+            </section>
+            <section id="pagoefectivo" class="oculto">
+                <div>
+                    <label>Precio a pagar en efectivo</label>
+                    <input type="text" id="importepagoefectivo" placeholder="Precio a pagar en efectivo">
+                </div>
+            </section>
+            <input id="condiciones" type="checkbox" name="condiciones" value="N" /> <p>Acepto las condiciones de la compra</p>
+            <div class="finalform">
+                <input type="button" id="imprimir" value="Imprimir" disabled="true" class="boton">
+                <input type="image" title="Boton enviar" id="iconoimprimir" disabled="true" alt="Imprimir" src="../Downloads/iconoimprimir.png"/>
+                <input type="button" id= "restablecer" value="Restablecer" class="boton">
+                <input type="image" title="Boton restablecer" id="iconorestablecer"  alt="Restablecer" src="../Downloads/restablecer.png"/>
+            </div>
+        </form>
+    </fieldset>
+</body>
+
+</html>
