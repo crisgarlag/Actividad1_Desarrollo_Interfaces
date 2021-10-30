@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Carrito Compra</title>
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="shortcut icon" href="src/cartPage.ico">
+        <script src="codigo.js"></script>
+    </head>
+    <body>
+        <ul>
+            <li><img id="carrito" src="src/carrito.png"><a>Carrito de la compra</a></li>
+        </ul>
+
+        <form>
+            <div id="total">
+                <h3 id="subtituloCarrito">Carrito</h3>
+                <textarea id="cartArticles" readonly="readonly"></textarea><br>
+                &nbsp;&nbsp;PRECIO TOTAL: <input type="text" id="totalPrice" value="0" readonly="readonly">
+                
+            </div>
+            Nombre Artículo: <input type="text" id="nameArticle"><span id="errorName"></span> &nbsp;&nbsp;&nbsp;
+            Forma de pago: <select id="pay">
+                <option value="selecciona">--Selecciona--</option>
+                <option value="tarjeta">Tarjeta de Crédito</option>
+                <option value="efectivo">Efectivo</option>
+            </select>
+            <br>
+            <br>
+            Precio Artículo: <input type="number" id="priceArticle"><span id="errorPrice"></span>&nbsp;&nbsp;&nbsp;
+            
+            <div id="creditCardMethod" style="display: none;">
+                <br>
+                <br>
+                Titular tarjeta: <input type="text" id="nameCard"><span id="errorTitular"></span>
+                &nbsp;&nbsp;Numero tarjeta: <input type="number" id="numberCard"><span id="errorCardNumber"></span>
+                &nbsp;&nbsp;CVV: <input type="number" id="cvv"><span id="errorCVV"></span>
+                &nbsp;&nbsp;Importe: <input type="text" id="amountCard" readonly="readonly">
+            </div>
+            <br>
+            <br>
+            Unidades: <input type="number" id="unitOption" value="1"><span id="errorUnits"></span>
+            <div id="cashMethod" style="display: none;">
+                <br><br>Importe efectivo: <input type="text" id="amountCash" readonly="readonly">
+            </div>
+            <br>
+            <br>
+            <input type="button" id="addCart" value="Añadir al carrito" >
+            <br>
+            <br>
+            <br>
+            
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+
+
+            <br>
+            <br>
+            <input type="checkbox" id="conditions"> Acepto las condiciones de compra</input>
+            <br>
+            <br>
+            <input type="button" id="buttonPrint" value="Imprimir" disabled="true">
+            <input type="button" id="buttonReset" value="Restablecer">
+
+        </form>
+    </body>
+</html>
