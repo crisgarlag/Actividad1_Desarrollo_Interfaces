@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+       <title>Formularios</title>
+       <script src="script.js"></script>
+    </head>
+
+    <body>
+
+
+       <form>
+          <div>
+              <h1>Carrito de la compra</h1>
+              <h3>Añade un producto</h3>
+          </div>
+
+          <br>
+
+         
+          <div>
+                <label for="nombre">Nombre del articulo:</label>
+                <input type= "text" placeholder="Inserte nombre.." id="nombre"  ></input>
+          </div>
+
+          <br>
+
+          <div>
+                <label for="precio">Precio del articulo:</label>
+                <input type= "number" placeholder="Inserte Precio.." id="precio"  min=0 required></input>
+          </div>
+
+          <br>
+
+         
+          <div>
+                <label for="cantidad">Unidades:</label>
+                <input type= "number" id="cantidad"  min=1 max=10 required></input>
+          </div>
+
+         
+          
+          <div>
+                <button  onclick="AñadirCarrito(event)">insertar</button>
+          </div>
+    
+       </form>
+
+
+        <br>
+
+        
+        <div>
+            <label for="conteo">Articulos en el carrito:</label>
+            <br>
+            <textarea id= "conteo" rows="1" cols="100"></textarea>
+        </div>
+            
+        <br>
+
+      
+        <div>
+            <label for="conteo2">Precio total del carrito:</label>
+            <br>
+            <textarea id= "conteo2"  rows="1" cols="100"></textarea>
+        </div>
+
+        <br>
+
+
+        <form>
+
+            <br>
+            
+          
+           <div>
+               <label for="metodo de pago">Forma de pago:</label>
+               <select name= "metodo de pago">
+                   <option value= "">Seleccione </option>
+                   <option value= "Efectivo" onchange="Tarjeta(event)">Efectivo
+                
+                   
+                
+                
+                
+                </option>
+                   <option value= "Tarjeta" onclick="Efectivo(event)">Tarjeta</option>
+               
+               </select>
+           </div>
+
+         <br>
+
+                    <div id= OPtarjeta>
+                        <label for="tarjeta">Titular tarjeta:</label>
+                        <input type= "text" placeholder="Inserte nombre.." id="NombreTarjeta"  ></input>
+
+                        <label for="Ntarjeta">Titular tarjeta:</label>
+                        <input type= "text" placeholder="Inserte numero.." id="NumeroTarjeta"  ></input>
+                    </div>
+              
+          <br>
+
+
+         <div>
+           <label for="terminos">Acepta los terminos y condiciones de uso? </label>
+           <br/>	
+           He leido y acepto los terminos de uso <input type="checkbox" name="terminos" value="Y" />
+           <input type="submit" value="Imprimir">  <input type="submit" value="Restablecer">
+         </div>
+
+      </form>
+
+
+
+
+       
+    </body>
+</html>
